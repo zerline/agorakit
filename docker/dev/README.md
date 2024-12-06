@@ -43,3 +43,4 @@ Can be accessed on port 8080 : http://localhost:8080
 
 ## Read emails
 Mailpit can be accessed on port 8025 : http://localhost:8025
+Note: to test this service separately, go to http://localhost:8025/api/v1
