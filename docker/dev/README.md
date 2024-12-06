@@ -13,12 +13,14 @@ It provides an as small as possible image that reflects a potential production e
 
 - In order to avoid permission issues, you can define GID and UID environment variables via the `setuid.sh` script. This scripts simply set UID and GID to your current user id (UID) and group id (GID). This will be the user owning the files written by the application. This is to avoid having files owned by root. More explanations can be found here : https://aschmelyun.com/blog/fixing-permissions-issues-with-docker-compose-and-php/
 
-- Run `up.sh` or `docker compose up` in the current directory (docker/dev) to start the container.
+- Run `up.sh` or `docker compose up` (or `docker-compose up`) in the current directory (docker/dev) to start the container.
 
 The container will take a while to build and if all goes well, you can access the app on localhost (either on http or https)
 
 - Connect to the shell inside the container using `./bash.sh`
 - `cp .env.dev .env`
+- edit the .env file to specify _8025_ as your _MAIL_PORT_
+- (or `sed "s/MAIL_PORT=1025/MAIL_PORT=8025/" .env.dev > .env`)
 - `composer install`
 - `php artisan key:generate`
 - `php artisan migrate`
@@ -44,4 +46,4 @@ Can be accessed on port 8080 : http://localhost:8080
 ## Read emails
 Mailpit can be accessed on port 8025 : http://localhost:8025
 
-Note: to test this service separately, go to http://localhost:8025/api/v1
+Note: if you want to test this mailpit service separately, you will find API documentation on page  http://localhost:8025/api/v1
