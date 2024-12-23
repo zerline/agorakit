@@ -81,9 +81,6 @@ return [
 
     'locales' => ['fr', 'en', 'nl', 'de', 'es', 'it', 'ru', 'eo'],
 
-    // Limit countries list for this instance
-    // Makes menus more comfortable
-    'countries' => ["be" => "Belgique", "ch" => "Suisse", "fr" => "France"],
 
     /*
     |--------------------------------------------------------------------------

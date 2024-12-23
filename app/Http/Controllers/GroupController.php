@@ -172,8 +172,7 @@ class GroupController extends Controller
             ->with('allowedTags', $group->getAllowedTags())
             ->with('newTagsAllowed', $group->areNewTagsAllowed())
             ->with('title', trans('group.create_group_title'))
-            ->with('country_options', ["be" => "Belgique", "ch" => "Suisse", "fr" => "France"]);
-	  //->with('country_options', config('countries'));
+	    ->with('country_options', config('agorakit.countries'));
     }
 
     /**
@@ -279,8 +278,7 @@ class GroupController extends Controller
             ->with('allowedTags', $group->getAllowedTags())
             ->with('newTagsAllowed', $group->areNewTagsAllowed())
             ->with('selectedTags', $group->getSelectedTags())
-	  //->with('country_options', config('countries'))
-            ->with('country_options', ["be" => "Belgique", "ch" => "Suisse", "fr" => "France"])
+	    ->with('country_options', config('agorakit.countries'))
             ->with('tab', 'admin');
     }
 
