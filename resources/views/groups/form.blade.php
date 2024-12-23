@@ -24,6 +24,15 @@
     {!! Form::text('address', null, ['class' => 'form-control']) !!}
 </div>
 
+<div class="form-group">
+    {!! Form::label('address specifications', trans('messages.address_specifications') . ':') !!}
+    <div class="small-help">
+        <i class="fas fa-info-circle"></i>
+        {{trans('messages.address_specifications_help')}}
+    </div>
+    {!! Form::select('country', $country_options, null, ['class' => 'form-control']) !!}
+    {!! Form::text('county', null, ['class' => 'form-control']) !!}
+</div>
 
 <div class="form-group">
     {!! Form::label('group_type', trans('group.type')) !!}

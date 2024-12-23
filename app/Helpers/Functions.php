@@ -131,6 +131,18 @@ function warning($message)
     session()->push('warnings', $message);
 }
 
+function make_address($address, $country, $adress_spec)
+{
+    if ($address_spec) { // postal code or county name
+        $address = $address . ", " . $address_spec;
+    }
+    if ($country) {
+        $country_name = config('countries')[$country];
+	return $adress . ", ". $country_name;
+	}
+    return $address;
+}
+
 // Geocode function - even more abstracted than geocoder php.
 // Pass it a string and it will return an array with longitude and latitude or false in case of problem
 function geocode($address)
