@@ -22,6 +22,6 @@ return [
   // to display on form select
   'countries' => ["be" => "Belgique", "fr" => "France"],
   // to parse form `postalcodeorcounty` output
-  $counties = [];
+  $counties = []
   // 'counties' => ["FR-01" => "Ain", "FR-02" => "Aisne", "FR-03" => "Allier", 
 ];
