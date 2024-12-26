@@ -131,16 +131,25 @@ function warning($message)
     session()->push('warnings', $message);
 }
 
-function make_address($address, $country, $adress_spec)
+function geocode_address_with_specs($address, $countrycode, $postalcodeorcounty)
 {
-    if ($address_spec) { // postal code or county name
-        $address = $address . ", " . $address_spec;
+  $numcode = "";
+  if ($postalcodeorcounty) { // postal code or county name
+    if (is_numeric($postalcodeorcounty)) {
+      $numcode = $postalcodeorcounty;
+    } else if (is_numeric(substr($postalcodeorcounty, -2))) { // ISO 3166-2
+      $numcode = substr($postalcodeorcounty, -2);
     }
-    if ($country) {
-        $country_name = config('countries')[$country];
-	return $adress . ", ". $country_name;
-	}
-    return $address;
+    if (array_key_exists($numcode, config('agorakit.counties'))) {
+      $postalcodeorcounty = config('agorakit.counties')[$numcode];
+    }
+    $address = $address . ", " . $postalcodeorcountry;
+  }
+  if ($country) {
+    $country_name = config('countries')[$country];
+    $address = $adress . ", ". $country_name;
+  }
+  return geocode($address);
 }
 
 // Geocode function - even more abstracted than geocoder php.

@@ -19,5 +19,9 @@ return [
   'max_file_size' => env('MAX_FILE_SIZE', 10000),
   'reactions' => ['plusone', 'minusone', 'laugh', 'confused', 'heart', 'hooray', 'rocket', 'eyes'],
   'data_retention' => env('DATA_RETENTION', 30),
-  'countries' => ["be" => "Belgique", "ch" => "Suisse", "fr" => "France"]
+  // to display on form select
+  'countries' => ["be" => "Belgique", "fr" => "France"],
+  // to parse form `postalcodeorcounty` output
+  $counties = [];
+  // 'counties' => ["FR-01" => "Ain", "FR-02" => "Aisne", "FR-03" => "Allier", 
 ];
