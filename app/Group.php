@@ -65,6 +65,8 @@ class Group extends Model
             'groups.name'    => 10,
             'groups.body'    => 10,
             'groups.address' => 2,
+            'groups.countrycode' => 2,
+            'groups.postalcodeorcounty' => 5,
         ],
     ];
 
