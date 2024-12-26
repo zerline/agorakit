@@ -7,6 +7,8 @@ return [
     'address_cannot_be_geocoded'                     => 'Votre adresse ne peut pas être géolocalisées. Veuillez utiliser un format simple, comme "numéro de rue, ville"',
     'address_privacy_and_help'                       => 'Comment remplir le champ adresse ? Ne remplissez que les informations que vous acceptez de mettre en ligne. L\'information d\'adresse même partielle, nous permet d\'afficher une carte avec la localisation des personnes, des groupes et des actions. Si vous ne souhaitez pas être mentionné⋅e sur cette carte ne mettez rien ici. Vous pouvez également simplement mettre votre commune (ou votre rue sans le numéro de maison) afin d\'apparaître sur le carte mais pas de manière précise.
     Utilisez le format numéro, rue, localité',
+    'address_specification'                          => 'Merci de préciser le code postal, ou au minimum le département.',
+    'address_specification_help'                     => 'Ceci dans le but de faciliter la localisation de votre adresse sur la carte.',
     'admin'                                          => 'Administrateur/trice',
     'admin_of'                                       => 'Administrateur/trice de',
     'administration'                                 => 'Administration',
@@ -42,6 +44,8 @@ return [
     'confirm_your_email'                             => 'Vérifiez votre adresse email',
     'contact'                                        => 'Contacter',
     'contact_this_user'                              => 'Contacter cette personne',
+    'country'                                        => 'Pays',
+    'country_empty'                                  => 'Choisissez votre pays',
     'create'                                         => 'Créer',
     'create_file_button'                             => 'Ajouter des fichiers',
     'create_folder'                                  => 'Créer un dossier',

@@ -25,13 +25,14 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('address specifications', trans('messages.address_specifications') . ':') !!}
+    {!! Form::label('country', trans('messages.country') . ':') !!}
+    {!! Form::select('country', ['' => trans('messages.country_empty')] + $country_options, null, ['class' => 'form-control']) !!}
+    {!! Form::label('address specifications', trans('messages.address_specification') . ':') !!}
     <div class="small-help">
         <i class="fas fa-info-circle"></i>
-        {{trans('messages.address_specifications_help')}}
+        {{trans('messages.address_specification_help')}}
     </div>
-    {!! Form::select('country', $country_options, null, ['class' => 'form-control']) !!}
-    {!! Form::text('county', null, ['class' => 'form-control']) !!}
+    {!! Form::text('address_specification', null, ['class' => 'form-control']) !!}
 </div>
 
 <div class="form-group">
