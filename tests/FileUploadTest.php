@@ -54,7 +54,7 @@ class FileUploadTest extends Tests\BrowserKitTestCase
     {
         $user = App\User::where('email', 'admin@agorakit.org')->first();
         $group = App\Group::where('name', 'File upload test group')->firstOrFail();
-        
+
         $this->actingAs($user)
           ->visit('/groups/' . $group->id . '/files/createfolder')
           ->see('Create a folder')
@@ -67,7 +67,7 @@ class FileUploadTest extends Tests\BrowserKitTestCase
     {
         $user = App\User::where('email', 'admin@agorakit.org')->first();
         $group = App\Group::where('name', 'File upload test group')->firstOrFail();
- 
+
         $file = UploadedFile::fake()->image('avatar.jpg');
 
         $this->actingAs($user)
