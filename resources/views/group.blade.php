@@ -10,7 +10,7 @@
 
 <body>
 
-    <div up-main>
+    <main><div up-main>
         @unless (request()->get('embed'))
             @include('partials.nav')
         @endunless
@@ -29,7 +29,7 @@
             </div>
         </div>
 
-    </div>
+    </div></main>
 
     @include('partials.footer')
 
