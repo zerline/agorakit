@@ -10,12 +10,12 @@
 
 <body>
 
-    <main><div up-main>
+    <div up-main>
         @unless (request()->get('embed'))
             @include('partials.nav')
         @endunless
 
-        <div class="sticky-messages">
+        </main><div class="sticky-messages">
             @include('partials.errors')
         </div>
 
@@ -27,9 +27,9 @@
             <div class="mt-md-4 mt-2 content" up-main="modal">
                 @yield('content')
             </div>
-        </div>
+        </div></main>
 
-    </div></main>
+    </div>
 
     @include('partials.footer')
 
