@@ -18,7 +18,7 @@ class LocationFromJson implements CastsAttributes
         if (!$value) { $value = ""; }
         // Decoding the JSON field into an object
         $decoded = json_decode($value, false);
-        if (!is_object($decoded)) {
+        if (!$decoded || !is_object($decoded)) {
           // This is probably an old `string` field, so we convert
           // putting all the string into `street` attribute
           $decoded = new \stdClass();
